@@ -22,9 +22,10 @@ $current_file = basename(__FILE__);
             $link = 'index.php';
             $current_page = ($current_file == $link);
             echo $link;
-            ?>"><?php
+            ?>"<?php
             if ($current_page)
                 echo ' class="selected_menu"';
+            ?>><?php
             echo $name;
             ?></a>
             <a href="<?php
@@ -32,9 +33,10 @@ $current_file = basename(__FILE__);
             $link = 'php_intro.php';
             $current_page = ($current_file == $link);
             echo $link;
-            ?>"><?php
+            ?>"<?php
             if ($current_page)
                 echo ' class="selected_menu"';
+            ?>><?php
             echo $name;
             ?></a>
             <a href="<?php
@@ -42,9 +44,10 @@ $current_file = basename(__FILE__);
             $link = 'architecture.php';
             $current_page = ($current_file == $link);
             echo $link;
-            ?>"><?php
+            ?>"<?php
             if ($current_page)
                 echo ' class="selected_menu"';
+            ?>><?php
             echo $name;
             ?></a>
         </nav>
