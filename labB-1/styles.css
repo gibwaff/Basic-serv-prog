@@ -1,0 +1,426 @@
+﻿/* Стандарты HTML5 и CSS3 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #111827;
+    background-color: #e5e7eb; /* Серый фон */
+    padding-top: 85px;
+    padding-bottom: 75px;
+}
+
+/* Шапка сайта (header) */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 70px;
+    background-color: #1f2937; /* Темно-серый антрацит */
+    color: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo {
+    height: 48px;
+    width: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.header-title {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.header-info {
+    font-size: 13px;
+    text-align: right;
+    line-height: 1.4;
+    color: #d1d5db;
+}
+
+/* ========================================================================== */
+/* Навигационное меню (menu.php):
+   "Все пункты меню оформляются в виде созданных с помощью тега <a>..</a> кнопок синего цвета.
+    Активный пункт меню должен выделяться красным цветом.
+    В случае выбора пункта "Просмотр" ниже основных пунктов выводятся дополнительные пункты сортировки.
+    Визуально они должны быть меньше основных, но в том же стиле.
+    Активный пункт подменю выделен красным цветом."
+/* ========================================================================== */
+
+.nav-section {
+    max-width: 1080px;
+    margin: 20px auto 0 auto;
+    padding: 0 20px;
+}
+
+#menu {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 18px 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.main-nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Кнопки основного меню (синий цвет по условию методички) */
+.main-nav-buttons a {
+    display: inline-block;
+    background-color: #2563eb; /* Синий цвет кнопок */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 20px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    font-weight: 600;
+    transition: all 0.15s ease;
+    border: 2px solid transparent;
+}
+
+.main-nav-buttons a:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+/* Активный пункт меню выделяется красным цветом */
+.main-nav-buttons a.selected {
+    background-color: #dc2626 !important; /* Красный цвет */
+    color: #ffffff;
+    font-weight: bold;
+    border-color: #b91c1c;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+}
+
+/* Дополнительные пункты сортировки (подменю) */
+#submenu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.submenu-caption {
+    font-size: 13px;
+    font-weight: 600;
+    color: #4b5563;
+    margin-right: 5px;
+}
+
+/* Дополнительные пункты меньше основных, но в том же стиле */
+#submenu a {
+    display: inline-block;
+    background-color: #3b82f6; /* Светлее синий */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.15s ease;
+    border: 2px solid transparent;
+}
+
+#submenu a:hover {
+    background-color: #2563eb;
+}
+
+/* Активный пункт подменю выделен красным цветом */
+#submenu a.selected {
+    background-color: #dc2626 !important;
+    color: #ffffff;
+    font-weight: bold;
+    border-color: #b91c1c;
+}
+
+/* ========================================================================== */
+/* Основной контейнер содержимого (main) */
+/* ========================================================================== */
+
+main {
+    max-width: 1080px;
+    margin: 20px auto 30px auto;
+    background-color: #ffffff;
+    color: #111827;
+    padding: 30px 35px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    min-height: 420px;
+}
+
+h1 {
+    font-size: 22px;
+    color: #111827;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+/* Таблица записной книжки (viewer.php) */
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 13.5px;
+}
+
+.contacts-table th, 
+.contacts-table td {
+    border: 1px solid #d1d5db;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.contacts-table th {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.contacts-table tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.contacts-table tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* Блок пагинации под таблицей:
+   "Ссылки на другие страницы в виде их номеров; при наведении курсора мыши 
+    она обводится в рамочку толщиной 2px" */
+#pages {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #e5e7eb;
+}
+
+#pages .page-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563;
+    margin-right: 6px;
+}
+
+#pages a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    height: 34px;
+    padding: 0 8px;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid transparent; /* Подготовка рамки */
+    transition: all 0.15s ease;
+}
+
+#pages a:hover {
+    border: 2px solid #2563eb; /* Рамочка толщиной 2px при наведении */
+    background-color: #ffffff;
+}
+
+#pages span.current-page {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    height: 34px;
+    padding: 0 8px;
+    background-color: #1f2937;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ========================================================================== */
+/* Стили форм добавления и редактирования */
+/* ========================================================================== */
+
+.contact-form {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.form-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-label {
+    width: 170px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #374151;
+    padding-top: 8px;
+    flex-shrink: 0;
+}
+
+.form-field, 
+.form-select, 
+.form-textarea {
+    width: 380px;
+    padding: 8px 12px;
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #111827;
+    font-family: inherit;
+}
+
+.form-field:focus, 
+.form-select:focus, 
+.form-textarea:focus {
+    border-color: #1f2937;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(31, 41, 55, 0.15);
+}
+
+.form-textarea {
+    height: 75px;
+    resize: vertical;
+}
+
+.form-submit-btn {
+    margin-left: 170px;
+    padding: 10px 24px;
+    background-color: #1f2937;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    align-self: flex-start;
+}
+
+.form-submit-btn:hover {
+    background-color: #374151;
+}
+
+/* Сообщения об успешности/ошибке */
+.msg-success {
+    background-color: #ecfdf5;
+    border-left: 4px solid #10b981;
+    color: #065f46;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.msg-error {
+    background-color: #fef2f2;
+    border-left: 4px solid #ef4444;
+    color: #991b1b;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Списки записей (для edit.php и delete.php) */
+.links-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.links-list a {
+    display: inline-block;
+    padding: 7px 14px;
+    background-color: #f3f4f6;
+    color: #1e3a8a;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13.5px;
+    border: 1px solid #d1d5db;
+    transition: all 0.15s ease;
+}
+
+.links-list a:hover {
+    background-color: #e2e8f0;
+    border-color: #9ca3af;
+}
+
+.links-list div.current-item {
+    display: inline-block;
+    padding: 7px 14px;
+    background-color: #dc2626;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 13.5px;
+    border: 1px solid #b91c1c;
+}
+
+/* Список на удаление: кнопка с подтверждением */
+.delete-item-link {
+    background-color: #fef2f2 !important;
+    color: #b91c1c !important;
+    border-color: #fca5a5 !important;
+}
+
+.delete-item-link:hover {
+    background-color: #fee2e2 !important;
+    border-color: #ef4444 !important;
+}
+
+/* Подвал сайта (footer) */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50px;
+    background-color: #111827;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    font-size: 13px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}
