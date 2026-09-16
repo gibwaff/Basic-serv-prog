@@ -1,0 +1,282 @@
+﻿/* Стандарты HTML5 и CSS3 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #111827;
+    background-color: #e5e7eb; /* Серый фон страницы */
+    padding-top: 85px;
+    padding-bottom: 75px;
+}
+
+/* Шапка (header) */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 70px;
+    background-color: #1f2937; /* Темно-серый антрацит */
+    color: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo {
+    height: 48px;
+    width: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.header-title {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.header-info {
+    font-size: 13px;
+    text-align: right;
+    line-height: 1.4;
+    color: #d1d5db;
+}
+
+/* Основной контейнер main */
+main {
+    max-width: 900px;
+    margin: 25px auto;
+    background-color: #ffffff;
+    color: #111827;
+    padding: 35px 40px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+    font-size: 22px;
+    color: #111827;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 8px;
+}
+
+h2 {
+    font-size: 17px;
+    color: #1f2937;
+    margin: 25px 0 12px 0;
+    padding-left: 8px;
+    border-left: 4px solid #4b5563;
+}
+
+.desc {
+    color: #4b5563;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* ========================================================================== */
+/* Форма ввода элементов массива */
+/* ========================================================================== */
+
+.form-table {
+    width: 100%;
+    max-width: 480px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.form-table td {
+    padding: 6px 8px;
+}
+
+.element-index {
+    width: 90px;
+    font-weight: 600;
+    color: #374151;
+    font-size: 14px;
+    text-align: right;
+    padding-right: 15px !important;
+}
+
+.array-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: Consolas, monospace;
+}
+
+.array-input:focus {
+    border-color: #1f2937;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(31, 41, 55, 0.15);
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.algo-select {
+    padding: 9px 14px;
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #111827;
+}
+
+.btn {
+    padding: 9px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #1f2937;
+    border: 1px solid #9ca3af;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}
+
+.btn-primary {
+    background-color: #1f2937;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #374151;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* ========================================================================== */
+/* Отображение массива и шагов сортировки */
+/* ========================================================================== */
+
+.array-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 12px 0 20px 0;
+}
+
+.arr-item {
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    color: #111827;
+}
+
+.arr-item span {
+    color: #6b7280;
+    font-size: 11px;
+    margin-right: 4px;
+}
+
+.step-card {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 10px 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.step-num {
+    font-weight: bold;
+    color: #1e3a8a;
+    width: 110px;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.step-values {
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    color: #111827;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.step-val-badge {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+
+.summary-card {
+    background-color: #ecfdf5;
+    border-left: 5px solid #10b981;
+    color: #065f46;
+    padding: 16px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.error-card {
+    background-color: #fef2f2;
+    border-left: 5px solid #ef4444;
+    color: #991b1b;
+    padding: 16px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* Подвал (footer) */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50px;
+    background-color: #111827;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    font-size: 13px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}
