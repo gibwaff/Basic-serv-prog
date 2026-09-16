@@ -1,0 +1,263 @@
+﻿/* Стандарты HTML5 и CSS3 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #111827;
+    background-color: #e5e7eb; /* Нейтральный серый фон */
+    padding-top: 85px;
+    padding-bottom: 75px;
+}
+
+/* Шапка страницы (header) */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 70px;
+    background-color: #1f2937; /* Темно-серый антрацит */
+    color: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo {
+    height: 48px;
+    width: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.header-title {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.header-info {
+    font-size: 13px;
+    text-align: right;
+    line-height: 1.4;
+    color: #d1d5db;
+}
+
+/* Основной контейнер main */
+main {
+    max-width: 920px;
+    margin: 25px auto;
+    background-color: #ffffff;
+    color: #111827;
+    padding: 35px 40px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+    font-size: 24px;
+    color: #111827;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 8px;
+}
+
+h2 {
+    font-size: 17px;
+    color: #1f2937;
+    margin: 25px 0 12px 0;
+    padding-left: 8px;
+    border-left: 4px solid #4b5563;
+}
+
+.desc {
+    color: #4b5563;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Поле ввода текста */
+.text-area-input {
+    width: 100%;
+    height: 180px;
+    padding: 14px 16px;
+    border: 1px solid #9ca3af;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    line-height: 1.5;
+    resize: vertical;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.text-area-input:focus {
+    border-color: #1f2937;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(31, 41, 55, 0.15);
+}
+
+/* Кнопки */
+.btn-submit {
+    padding: 11px 28px;
+    background-color: #1f2937;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #374151;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Исходный текст: выделяется цветом и курсивом (требование методички) */
+.src_text {
+    background-color: #f8fafc;
+    border-left: 4px solid #3b82f6;
+    padding: 16px 20px;
+    border-radius: 4px;
+    font-style: italic; /* Курсив */
+    color: #1e3a8a;      /* Цветное выделение */
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* Сообщение об ошибке, если текста нет */
+.src_error {
+    background-color: #fef2f2;
+    border-left: 4px solid #ef4444;
+    color: #991b1b;
+    padding: 16px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Таблицы с результатами анализа:
+   "Результат анализа оформляется в виде таблицы с границами между ячейками" */
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+.result-table th, 
+.result-table td {
+    border: 1px solid #d1d5db; /* Границы между ячейками */
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.result-table th {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.result-table tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.result-table td:nth-child(2) {
+    font-weight: bold;
+    color: #1f2937;
+    width: 140px;
+    text-align: center;
+}
+
+/* Таблицы символов и слов (сетка) */
+.data-grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 13.5px;
+}
+
+.data-grid-table th,
+.data-grid-table td {
+    border: 1px solid #d1d5db;
+    padding: 7px 12px;
+    text-align: center;
+}
+
+.data-grid-table th {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.symbol-badge {
+    display: inline-block;
+    background-color: #e5e7eb;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-family: Consolas, monospace;
+    font-weight: bold;
+}
+
+/* Кнопка "Другой анализ" (реализуется с помощью тега <a>, возвращает на index.html) */
+#back_button {
+    display: inline-block;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    border: 2px solid #1f2937;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: all 0.2s ease;
+}
+
+#back_button:hover {
+    background-color: #1f2937;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Подвал страницы (footer) */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50px;
+    background-color: #111827;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    font-size: 13px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}

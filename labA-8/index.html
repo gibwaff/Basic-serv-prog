@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Беляков Игорь Романович, группа 241-3210. Лабораторная работа № А-8: Анализ текста</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Шапка страницы (header) -->
+    <header>
+        <div class="header-left">
+            <img src="img/logo.png" alt="Логотип Московского Политеха" class="header-logo">
+            <div class="header-title">Лабораторная работа № А-8: Анализ текста</div>
+        </div>
+        <div class="header-info">
+            <div><strong>Студент:</strong> Беляков Игорь Романович</div>
+            <div><strong>Группа:</strong> 241-3210</div>
+        </div>
+    </header>
+
+    <!-- Основной блок страницы (main) -->
+    <main>
+        <h1>Ввод текста для статистического анализа</h1>
+        <p class="desc">
+            Введите произвольный текст на русском или английском языке. Система определит количество символов,
+            букв (строчных и прописных), знаков препинания, цифр, подсчитает вхождения символов и отсортирует слова по алфавиту.
+        </p>
+
+        <!-- Форма отправки текста на страницу result.php методом POST -->
+        <form action="result.php" method="post">
+            <textarea name="data" class="text-area-input" placeholder="Введите текст для анализа здесь...">Московский политехнический университет проводит лабораторную работу № 8 по серверной веб-разработке. PHP 8.3 & Web Technologies!</textarea>
+            <div>
+                <button type="submit" class="btn-submit">Анализировать</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Подвал страницы (footer) -->
+    <footer>
+        <div>Московский политехнический университет &copy; 2026</div>
+        <div>Форма ввода текста (UTF-8)</div>
+    </footer>
+
+</body>
+</html>
